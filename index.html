@@ -94,6 +94,15 @@ let t;addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(()=>subs.forEa
 .adm .gh .badge.v{background:#0e9f6e}.adm .gh .badge.s{background:#dc2626}
 .adm td.qw{color:var(--color-ok);font-weight:600}.adm td.ql{color:var(--color-bad)}
 .adm td.bonus{color:var(--color-warn);font-weight:600}
+.adm table.tab{table-layout:fixed;min-width:34rem}
+.adm table.tab td{height:2.4rem;overflow:hidden;text-overflow:ellipsis}
+.adm table.tab td .pl span{overflow:hidden;text-overflow:ellipsis}
+.adm table.tab .av{width:28px;height:28px}
+.adm table.tab .avx{width:28px;height:28px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;background:var(--cds-chart-muted);color:#fff}
+.adm table.tab col.c1{width:3rem}.adm table.tab col.c3{width:4.2rem}.adm table.tab col.cq{width:3.6rem}.adm table.tab col.c8{width:4rem}.adm table.tab col.c9{width:3.4rem}.adm table.tab col.c10{width:3.6rem}
+@media (max-width:600px){.adm table.tab{min-width:0}.adm table.tab col.cq{width:0}
+.adm table.tab col.c1{width:2rem}.adm table.tab col.c3{width:2.9rem}.adm table.tab col.c8{width:2.9rem}.adm table.tab col.c9{width:2.2rem}.adm table.tab col.c10{width:2.6rem}
+.adm table.tab .av,.adm table.tab .avx{display:none}.adm table.tab td,.adm table.tab th{padding-left:4px;padding-right:4px}}
 .adm .w{color:var(--color-ok)} .adm .l{color:var(--color-bad)}
 .adm .tip{position:absolute;z-index:2;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);border-radius:var(--cds-radius);box-shadow:var(--cds-shadow-popover);padding:var(--cds-pad-xs) var(--cds-pad-sm);font-size:var(--cds-font-size-caption);display:none;white-space:nowrap}
 .adm .tip .d{color:var(--cds-text-secondary)}
@@ -190,7 +199,7 @@ let t;addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(()=>subs.forEa
         <h2 id="h-tab-adm">Tabellino ADM</h2>
         <p class="note">Punti per quarto dal punteggio progressivo del referto.</p>
         <div class="tw">
-          <table id="t-tab-adm" data-source="tab_partita" data-row-key="gara,id">
+          <table class="tab" id="t-tab-adm" data-source="tab_partita" data-row-key="gara,id"><colgroup><col class="c1"><col><col class="c3"><col class="hide-s cq"><col class="hide-s cq"><col class="hide-s cq"><col class="hide-s cq"><col class="c8"><col class="c9"><col class="c10"></colgroup>
             <thead><tr><th class="n" data-field="numero">#</th><th data-field="giocatore">Giocatore</th><th class="n" data-field="punti">Punti</th><th class="n hide-s" data-field="p1">1°Q</th><th class="n hide-s" data-field="p2">2°Q</th><th class="n hide-s" data-field="p3">3°Q</th><th class="n hide-s" data-field="p4">4°Q</th><th class="n" data-field="triple">Triple</th><th class="n" data-field="tl">TL</th><th class="n" data-field="falli">Falli</th></tr></thead>
             <tbody></tbody>
           </table>
@@ -200,7 +209,7 @@ let t;addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(()=>subs.forEa
         <h2 id="h-tab-avv">Tabellino avversario</h2>
         <p class="note">Utile per preparare la gara di ritorno.</p>
         <div class="tw">
-          <table id="t-tab-avv" data-source="tabellini_avversari" data-row-key="gara,numero">
+          <table class="tab" id="t-tab-avv" data-source="tabellini_avversari" data-row-key="gara,numero"><colgroup><col class="c1"><col><col class="c3"><col class="hide-s cq"><col class="hide-s cq"><col class="hide-s cq"><col class="hide-s cq"><col class="c8"><col class="c9"><col class="c10"></colgroup>
             <thead><tr><th class="n" data-field="numero">#</th><th data-field="giocatore">Giocatore</th><th class="n" data-field="punti">Punti</th><th class="n hide-s" data-field="p1">1°Q</th><th class="n hide-s" data-field="p2">2°Q</th><th class="n hide-s" data-field="p3">3°Q</th><th class="n hide-s" data-field="p4">4°Q</th><th class="n" data-field="triple">Triple</th><th class="n" data-field="tl_segnati">TL</th><th class="n" data-field="falli">Falli</th></tr></thead>
             <tbody></tbody>
           </table>
@@ -581,7 +590,7 @@ function drawGame(){
     const rs=d.data.filter(r=>r.gara===selGara).sort((x,y)=>Number(y.punti)-Number(x.punti)||Number(x.numero)-Number(y.numero));
     if(!rs.length){const tr=t.insertRow();const td=tr.insertCell();td.colSpan=fields.length;td.className='empty';td.textContent='Non disponibile per questa partita.';return;}
     rs.forEach(r=>{const tr=t.insertRow();tr.dataset.key=keyFn(r);fields.forEach(([k,n,h])=>{const td=tr.insertCell();if(n)td.className='n';if(h)td.classList.add('hide-s');
-      if(k==='giocatore'&&r.id){const dv=document.createElement('div');dv.className='pl';const sp=document.createElement('span');sp.textContent=r[k];dv.append(avatar(r.id),sp);td.append(dv);}else td.textContent=r[k];});});};
+      if(k==='giocatore'){const dv=document.createElement('div');dv.className='pl';const sp=document.createElement('span');sp.textContent=r[k];if(r.id)dv.append(avatar(r.id));else{const x=document.createElement('span');x.className='avx';x.textContent=r.numero;dv.append(x);}dv.append(sp);td.append(dv);}else td.textContent=r[k];});});};
   const F=[['numero',1],['giocatore'],['punti',1],['p1',1,1],['p2',1,1],['p3',1,1],['p4',1,1],['triple',1]];
   fill('#t-tab-adm','tab_partita',r=>encodeURIComponent(r.gara)+','+encodeURIComponent(r.id),[...F,['tl',1],['falli',1]]);
   fill('#t-tab-avv','tabellini_avversari',r=>encodeURIComponent(r.gara)+','+encodeURIComponent(r.numero),[...F,['tl_segnati',1],['falli',1]]);
@@ -609,5 +618,5 @@ if(named&&named.classList.contains('pane'))document.querySelector(`[data-tab="${
 
 </script>
 </div>
-<div class="site-foot">Aggiornato il 22/10/2026 15:33 · Fonte: referti ufficiali e <a href="https://fip.it/risultati/?group=campionati-regionali&amp;regione_codice=LO&amp;comitato_codice=RLO&amp;sesso=M&amp;codice_campionato=2DM&amp;codice_fase=1&amp;codice_girone=85815" style="color:inherit">fip.it</a></div>
+<div class="site-foot">Aggiornato il 22/10/2026 15:36 · Fonte: referti ufficiali e <a href="https://fip.it/risultati/?group=campionati-regionali&amp;regione_codice=LO&amp;comitato_codice=RLO&amp;sesso=M&amp;codice_campionato=2DM&amp;codice_fase=1&amp;codice_girone=85815" style="color:inherit">fip.it</a></div>
 </body></html>
