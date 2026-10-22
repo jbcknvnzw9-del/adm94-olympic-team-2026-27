@@ -103,6 +103,9 @@ let t;addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(()=>subs.forEa
 @media (max-width:600px){.adm table.tab{min-width:0}.adm table.tab col.cq{width:0}
 .adm table.tab col.c1{width:2rem}.adm table.tab col.c3{width:2.9rem}.adm table.tab col.c8{width:2.9rem}.adm table.tab col.c9{width:2.2rem}.adm table.tab col.c10{width:2.6rem}
 .adm table.tab .av,.adm table.tab .avx{display:none}.adm table.tab td,.adm table.tab th{padding-left:4px;padding-right:4px}}
+.adm .nmw{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.adm a.plink{font-size:var(--cds-font-size-caption);color:var(--adm-royal);text-decoration:none;margin-top:2px}
+.adm a.plink:hover{text-decoration:underline}
 .adm .w{color:var(--color-ok)} .adm .l{color:var(--color-bad)}
 .adm .tip{position:absolute;z-index:2;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);border-radius:var(--cds-radius);box-shadow:var(--cds-shadow-popover);padding:var(--cds-pad-xs) var(--cds-pad-sm);font-size:var(--cds-font-size-caption);display:none;white-space:nowrap}
 .adm .tip .d{color:var(--cds-text-secondary)}
@@ -456,7 +459,7 @@ function draw(){
     document.querySelectorAll('#t-giocatori th').forEach(th=>{const k=th.querySelector('button').dataset.k;th.setAttribute('aria-sort',k===sortK?(sortD>0?'ascending':'descending'):'none');});
     rows.forEach(r=>{const tr=tb.insertRow();tr.dataset.key=r.id;
       [['numero',1],['giocatore'],['gare',1],['punti',1],['media',1],['max',1,1],['triple',1],['tl',1,1],['falli',1]].forEach(([k,n,h])=>{const td=tr.insertCell();if(n)td.className='n';if(h)td.classList.add('hide-s');
-        const v=r[k];if(k==='giocatore'){const d=document.createElement('div');d.className='pl';const s=document.createElement('span');s.textContent=v;d.append(avatar(r.id),s);td.append(d);}
+        const v=r[k];if(k==='giocatore'){const d=document.createElement('div');d.className='pl';const w=document.createElement('div');w.className='nmw';const s=document.createElement('span');s.textContent=v;const a=document.createElement('a');a.href='#roster-tab';a.className='plink';a.dataset.id=r.id;a.textContent='Scheda giocatore →';w.append(s,a);d.append(avatar(r.id),w);td.append(d);}
         else td.textContent=v==null?'—':k==='media'?fmt1(v):String(v);});});}
 
   // scorers
@@ -612,11 +615,14 @@ function drawCl(){const cl=dash.data('classifica'),tb=document.querySelector('#t
     [r.giornata,new Date(r.data+'T12:00:00').toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'}),r.casa,played?`${r.punti_casa}–${r.punti_ospite}${r.stato==='Ufficioso'?'*':''}`:'—',r.ospite].forEach((v,i)=>{const td=tr.insertCell();td.textContent=v;if(i===0||i===3)td.className='n';if(i===1)td.className='hide-s';if(i===3)td.style.textAlign='center';});});}
 document.getElementById('g-roster').addEventListener('click',e=>{const c=e.target.closest('.pc');if(!c)return;selId=selId===c.dataset.id?null:c.dataset.id;drawExtra();
   if(selId)requestAnimationFrame(()=>document.getElementById('scheda').scrollIntoView({behavior:'smooth',block:'start'}));});
+document.getElementById('t-giocatori').addEventListener('click',e=>{const a=e.target.closest('a.plink');if(!a)return;e.preventDefault();
+  selId=a.dataset.id;document.querySelector('[data-tab="roster-tab"]').click();
+  requestAnimationFrame(()=>document.getElementById('scheda').scrollIntoView({behavior:'smooth',block:'start'}));});
 dash.onData(()=>{draw();drawCl();drawExtra();drawGame();});
 const named=document.getElementById(location.hash.slice(1));
 if(named&&named.classList.contains('pane'))document.querySelector(`[data-tab="${named.id}"]`).click();
 
 </script>
 </div>
-<div class="site-foot">Aggiornato il 22/10/2026 16:13 · Fonte: referti ufficiali e <a href="https://fip.it/risultati/?group=campionati-regionali&amp;regione_codice=LO&amp;comitato_codice=RLO&amp;sesso=M&amp;codice_campionato=2DM&amp;codice_fase=1&amp;codice_girone=85815" style="color:inherit">fip.it</a></div>
+<div class="site-foot">Aggiornato il 22/10/2026 16:17 · Fonte: referti ufficiali e <a href="https://fip.it/risultati/?group=campionati-regionali&amp;regione_codice=LO&amp;comitato_codice=RLO&amp;sesso=M&amp;codice_campionato=2DM&amp;codice_fase=1&amp;codice_girone=85815" style="color:inherit">fip.it</a></div>
 </body></html>
