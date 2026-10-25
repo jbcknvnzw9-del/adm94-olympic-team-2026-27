@@ -1,7 +1,13 @@
 giornata,data,casa,ospite,punti_casa,punti_ospite,stato,verificato_il
-1,2026-10-19,Cesmed Centro Basket Locate,Città di Opera,77,85,Ufficioso,2026-10-22
-1,2026-10-21,Pall. Stradella,ADM 94 Olympic Team Milano,43,53,Ufficioso,2026-10-22
-1,2026-10-21,Sanmaurense Pavia,IULM Alumni Basket,,,Da giocare,2026-10-22
-1,2026-10-22,Virtus Binasco,Olimpya Siziano,,,Da giocare,2026-10-22
-1,2026-10-22,Basket Rozzano Pro Loco,PGS Domino Pavia,,,Da giocare,2026-10-22
-1,2026-10-22,Kids Sport Education Zibido,Ebro Milano,,,Da giocare,2026-10-22
+1,2026-10-19,Cesmed Centro Basket Locate,Città di Opera,77,85,Ufficioso,2026-10-25
+1,2026-10-21,Pall. Stradella,ADM 94 Olympic Team Milano,43,53,Ufficioso,2026-10-25
+1,2026-10-21,Sanmaurense Pavia,IULM Alumni Basket,54,37,Ufficioso,2026-10-25
+1,2026-10-22,Virtus Binasco,Olimpya Siziano,67,79,Ufficioso,2026-10-25
+1,2026-10-22,Basket Rozzano Pro Loco,PGS Domino Pavia,58,51,Ufficioso,2026-10-25
+1,2026-10-22,Kids Sport Education Zibido,Ebro Milano,39,111,Ufficiale,2026-10-25
+2,2026-10-27,IULM Alumni Basket,Pall. Stradella,,,Da giocare,2026-10-25
+2,2026-10-28,ADM 94 Olympic Team Milano,Virtus Binasco,,,Da giocare,2026-10-25
+2,2026-10-29,PGS Domino Pavia,Cesmed Centro Basket Locate,,,Da giocare,2026-10-25
+2,2026-10-29,Olimpya Siziano,Basket Rozzano Pro Loco,,,Da giocare,2026-10-25
+2,2026-11-01,Città di Opera,Kids Sport Education Zibido,,,Da giocare,2026-10-25
+2,2026-11-01,Ebro Milano,Sanmaurense Pavia,,,Da giocare,2026-10-25
