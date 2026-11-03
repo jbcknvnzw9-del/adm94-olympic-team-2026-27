@@ -184,7 +184,7 @@
         </div>
         <div class="card">
           <h2 id="h-parz">Parziali e falli per quarto</h2>
-          <p class="note">Verde = quarto vinto, rosso = perso. Bonus dal 5° fallo di squadra nel quarto.</p>
+          <p class="note">Verde = quarto vinto, rosso = perso. Bonus dal 5° fallo di squadra nel quarto. "4+" = bonus raggiunto: oltre non si possono contare dal referto.</p>
           <div class="tw"><table id="t-parz" data-source="partite"><thead></thead><tbody></tbody></table></div>
         </div>
       </div>
@@ -582,8 +582,8 @@ function drawGame(){
   const ra=row('Punti ADM',c=>({t:p[c.a],c:+p[c.a]>+p[c.o]?'qw':+p[c.a]<+p[c.o]?'ql':''}));ra.insertCell().textContent=a;ra.cells[ra.cells.length-1].className='n';
   const ro=row('Punti '+p.avversario,c=>({t:p[c.o]}));ro.insertCell().textContent=o;ro.cells[ro.cells.length-1].className='n';
   if(p.falli_adm!==''&&p.falli_adm!=null){
-    const fa=row('Falli ADM',c=>({t:c.fa?p[c.fa]:'—',c:c.fa&&+p[c.fa]>=5?'bonus':''}));fa.insertCell().textContent=p.falli_adm;fa.cells[fa.cells.length-1].className='n';
-    const fo=row('Falli '+p.avversario,c=>({t:c.fo?p[c.fo]:'—',c:c.fo&&+p[c.fo]>=5?'bonus':''}));fo.insertCell().textContent=p.falli_avv;fo.cells[fo.cells.length-1].className='n';}
+    const fa=row('Falli ADM',c=>({t:c.fa?p[c.fa]:'—',c:c.fa&&(+p[c.fa]>=5||/\+$/.test(p[c.fa]))?'bonus':''}));fa.insertCell().textContent=p.falli_adm;fa.cells[fa.cells.length-1].className='n';
+    const fo=row('Falli '+p.avversario,c=>({t:c.fo?p[c.fo]:'—',c:c.fo&&(+p[c.fo]>=5||/\+$/.test(p[c.fo]))?'bonus':''}));fo.insertCell().textContent=p.falli_avv;fo.cells[fo.cells.length-1].className='n';}
   // tabellini
   const fill=(id,ds,keyFn,fields)=>{const t=document.querySelector(id+' tbody');t.replaceChildren();const d=dash.data(ds);if(d.status!=='ok')return;
     const rs=d.data.filter(r=>r.gara===selGara).sort((x,y)=>Number(y.punti)-Number(x.punti)||Number(x.numero)-Number(y.numero));
