@@ -1,31 +1,37 @@
 giornata,data,casa,ospite,punti_casa,punti_ospite,stato,verificato_il
-1,2026-10-19,Cesmed Centro Basket Locate,Città di Opera,77,85,Ufficioso,2026-11-15
-1,2026-10-21,Pall. Stradella,ADM 94 Olympic Team Milano,43,53,Ufficioso,2026-11-15
-1,2026-10-21,Sanmaurense Pavia,IULM Alumni Basket,54,37,Ufficioso,2026-11-15
-1,2026-10-22,Virtus Binasco,Olimpya Siziano,67,79,Ufficioso,2026-11-15
-1,2026-10-22,Basket Rozzano Pro Loco,PGS Domino Pavia,58,51,Ufficioso,2026-11-15
-1,2026-10-22,Kids Sport Education Zibido,Ebro Milano,39,111,Ufficiale,2026-11-15
-2,2026-10-27,IULM Alumni Basket,Pall. Stradella,30,46,Ufficioso,2026-11-15
-2,2026-10-28,ADM 94 Olympic Team Milano,Virtus Binasco,76,69,Ufficioso,2026-11-15
-2,2026-10-29,PGS Domino Pavia,Cesmed Centro Basket Locate,88,85,Ufficiale,2026-11-15
-2,2026-10-29,Olimpya Siziano,Basket Rozzano Pro Loco,83,56,Ufficioso,2026-11-15
-2,2026-11-01,Città di Opera,Kids Sport Education Zibido,136,23,Ufficioso,2026-11-15
-2,2026-11-01,Ebro Milano,Sanmaurense Pavia,64,49,Ufficioso,2026-11-15
-3,2026-11-03,IULM Alumni Basket,ADM 94 Olympic Team Milano,40,55,Ufficioso,2026-11-15
-3,2026-11-04,PGS Domino Pavia,Olimpya Siziano,85,81,Ufficioso,2026-11-15
-3,2026-11-05,Cesmed Centro Basket Locate,Ebro Milano,59,65,Ufficioso,2026-11-15
-3,2026-11-05,Virtus Binasco,Kids Sport Education Zibido,100,48,Ufficiale,2026-11-15
-3,2026-11-05,Basket Rozzano Pro Loco,Città di Opera,30,88,Ufficioso,2026-11-15
-3,2026-11-06,Sanmaurense Pavia,Pall. Stradella,66,56,Ufficiale,2026-11-15
-4,2026-11-10,IULM Alumni Basket,Città di Opera,42,46,Ufficioso,2026-11-19
-4,2026-11-11,ADM 94 Olympic Team Milano,Sanmaurense Pavia,79,64,Ufficioso,2026-11-19
-4,2026-11-12,Kids Sport Education Zibido,Cesmed Centro Basket Locate,59,70,Ufficioso,2026-11-19
-4,2026-11-12,Virtus Binasco,Basket Rozzano Pro Loco,52,48,Ufficioso,2026-11-19
-4,2026-11-13,Pall. Stradella,Olimpya Siziano,67,65,Ufficioso,2026-11-19
-4,2026-11-15,Ebro Milano,PGS Domino Pavia,54,52,Ufficioso,2026-11-19
-5,2026-11-16,Città di Opera,PGS Domino Pavia,80,76,Ufficioso,2026-11-19
-5,2026-11-17,IULM Alumni Basket,Virtus Binasco,61,60,Ufficioso,2026-11-19
-5,2026-11-18,Sanmaurense Pavia,Kids Sport Education Zibido,79,45,Ufficioso,2026-11-19
-5,2026-11-19,Cesmed Centro Basket Locate,Pall. Stradella,,,Da giocare,2026-11-19
-5,2026-11-19,Basket Rozzano Pro Loco,ADM 94 Olympic Team Milano,59,70,Ufficioso,2026-11-19
-5,2026-11-22,Olimpya Siziano,Ebro Milano,,,Da giocare,2026-11-19
+1,2026-10-19,Cesmed Centro Basket Locate,Città di Opera,77,85,Ufficioso,2026-11-22
+1,2026-10-21,Pall. Stradella,ADM 94 Olympic Team Milano,43,53,Ufficioso,2026-11-22
+1,2026-10-21,Sanmaurense Pavia,IULM Alumni Basket,54,37,Ufficioso,2026-11-22
+1,2026-10-22,Virtus Binasco,Olimpya Siziano,67,79,Ufficioso,2026-11-22
+1,2026-10-22,Basket Rozzano Pro Loco,PGS Domino Pavia,58,51,Ufficioso,2026-11-22
+1,2026-10-22,Kids Sport Education Zibido,Ebro Milano,39,111,Ufficiale,2026-11-22
+2,2026-10-27,IULM Alumni Basket,Pall. Stradella,30,46,Ufficioso,2026-11-22
+2,2026-10-28,ADM 94 Olympic Team Milano,Virtus Binasco,76,69,Ufficioso,2026-11-22
+2,2026-10-29,PGS Domino Pavia,Cesmed Centro Basket Locate,88,85,Ufficiale,2026-11-22
+2,2026-10-29,Olimpya Siziano,Basket Rozzano Pro Loco,83,56,Ufficioso,2026-11-22
+2,2026-11-01,Città di Opera,Kids Sport Education Zibido,136,23,Ufficioso,2026-11-22
+2,2026-11-01,Ebro Milano,Sanmaurense Pavia,64,49,Ufficioso,2026-11-22
+3,2026-11-03,IULM Alumni Basket,ADM 94 Olympic Team Milano,40,55,Ufficioso,2026-11-22
+3,2026-11-04,PGS Domino Pavia,Olimpya Siziano,85,81,Ufficioso,2026-11-22
+3,2026-11-05,Cesmed Centro Basket Locate,Ebro Milano,59,65,Ufficioso,2026-11-22
+3,2026-11-05,Virtus Binasco,Kids Sport Education Zibido,100,48,Ufficiale,2026-11-22
+3,2026-11-05,Basket Rozzano Pro Loco,Città di Opera,30,88,Ufficioso,2026-11-22
+3,2026-11-06,Sanmaurense Pavia,Pall. Stradella,66,56,Ufficiale,2026-11-22
+4,2026-11-10,IULM Alumni Basket,Città di Opera,42,46,Ufficioso,2026-11-22
+4,2026-11-11,ADM 94 Olympic Team Milano,Sanmaurense Pavia,79,64,Ufficioso,2026-11-22
+4,2026-11-12,Kids Sport Education Zibido,Cesmed Centro Basket Locate,59,70,Ufficioso,2026-11-22
+4,2026-11-12,Virtus Binasco,Basket Rozzano Pro Loco,52,48,Ufficioso,2026-11-22
+4,2026-11-13,Pall. Stradella,Olimpya Siziano,67,65,Ufficioso,2026-11-22
+4,2026-11-15,Ebro Milano,PGS Domino Pavia,54,52,Ufficioso,2026-11-22
+5,2026-11-16,Città di Opera,PGS Domino Pavia,80,76,Ufficioso,2026-11-22
+5,2026-11-17,IULM Alumni Basket,Virtus Binasco,61,60,Ufficiale,2026-11-22
+5,2026-11-18,Sanmaurense Pavia,Kids Sport Education Zibido,79,45,Ufficioso,2026-11-22
+5,2026-11-19,Cesmed Centro Basket Locate,Pall. Stradella,55,49,Ufficioso,2026-11-22
+5,2026-11-19,Basket Rozzano Pro Loco,ADM 94 Olympic Team Milano,59,70,Ufficioso,2026-11-22
+5,2026-11-22,Olimpya Siziano,Ebro Milano,,,Da giocare,2026-11-22
+6,2026-11-25,Città di Opera,Olimpya Siziano,,,Da giocare,2026-11-22
+6,2026-11-26,Kids Sport Education Zibido,IULM Alumni Basket,,,Da giocare,2026-11-22
+6,2026-11-26,Cesmed Centro Basket Locate,Basket Rozzano Pro Loco,,,Da giocare,2026-11-22
+6,2026-11-26,Virtus Binasco,Sanmaurense Pavia,,,Da giocare,2026-11-22
+6,2026-11-27,Pall. Stradella,PGS Domino Pavia,,,Da giocare,2026-11-22
+6,2026-11-29,Ebro Milano,ADM 94 Olympic Team Milano,,,Da giocare,2026-11-22
